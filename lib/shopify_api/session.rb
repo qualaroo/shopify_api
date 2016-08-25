@@ -85,7 +85,7 @@ module ShopifyAPI
         raise ShopifyAPI::ValidationException, "Invalid Signature: Possible malicious login"
       end
 
-      code = params['code']
+      code = params[:code]
 
       response = access_token_request(code)
 
